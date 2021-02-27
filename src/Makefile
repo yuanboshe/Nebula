@@ -1,3 +1,4 @@
+SHELL := /bin/bash
 CC = gcc
 CXX = g++
 CFLAGS = -g -O3 -Wall -Wno-unused-function -m64 -Wl,--export-dynamic -D__GUNC__ -fPIC 
@@ -18,7 +19,7 @@ ifeq ($(ARCH),$(ARCH64))
 else
 	SYSTEM_LIB_PATH:=/usr/lib:/usr/local/lib
 endif
-LIB3RD_PATH = ../../NebulaDepend
+LIB3RD_PATH = /opt/nebula
 
 NEBULA_PATH = ..
 
