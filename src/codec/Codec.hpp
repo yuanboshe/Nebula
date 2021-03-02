@@ -35,11 +35,11 @@ const unsigned int gc_uiAesBit  = 0x02000000;          ///< 采用128位aes加�
 enum E_CODEC_TYPE
 {
     CODEC_UNKNOW            = 0,        ///< 未知
-    CODEC_PROTO             = 1,        ///< Protobuf编解码
-    CODEC_NEBULA            = 2,        ///< Nebula Protobuf 与CODEC_PROTO完全相同，只为程序判断内部服务器之间连接而用
+	CODEC_NEBULA            = 1,        ///< Nebula Protobuf 与CODEC_PROTO完全相同，只为程序判断内部服务器之间连接而用
+	CODEC_PROTO             = 2,        ///< Protobuf编解码
     CODEC_HTTP              = 3,        ///< HTTP编解码
-    CODEC_HTTP_CUSTOM       = 4,        ///< 带自定义HTTP头的http编解码
-    CODEC_PRIVATE           = 5,        ///< 私有协议编解码
+	CODEC_PRIVATE           = 4,        ///< 私有协议编解码
+	CODEC_HTTP_CUSTOM       = 5,        ///< 带自定义HTTP头的http编解码
     CODEC_WS_EXTEND_JSON    = 6,        ///< 带Extension data的websocket协议扩展，Application data为json
     CODEC_WS_EXTEND_PB      = 7,        ///< 带Extension data的websocket协议扩展，Application data为pb
     CODEC_NEBULA_IN_NODE    = 8,        ///< 节点各进程间通信协议，与CODEC_NEBULA协议相同，使用的编解码类也相同，只为区别节点内部连接与外部连接
